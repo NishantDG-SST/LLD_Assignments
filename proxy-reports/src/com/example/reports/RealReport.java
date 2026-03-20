@@ -7,17 +7,6 @@ public class RealReport implements Report {
 
     public RealReport(String filename) {
         this.filename = filename;
-        loadFromDisk();
-    }
-
-    private void loadFromDisk() {
-        System.out.println("Loading report from disk: " + filename);
-        try {
-            Thread.sleep(2000); // expensive loading
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        content = "Confidential Report Content of " + filename;
     }
 
     @Override
